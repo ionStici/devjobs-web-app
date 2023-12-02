@@ -39,7 +39,7 @@ function Jobs({ jobs: allJobs, jobFilter }) {
 
   function handleLoadMore() {
     if (jobsNum === jobs.length) {
-      setJobsNum((prev) => prev - 3);
+      setJobsNum(12);
       return;
     }
     setJobsNum((prev) => prev + 3);
@@ -47,18 +47,21 @@ function Jobs({ jobs: allJobs, jobFilter }) {
 
   return (
     <>
-      <section className={styles.section}>
+      <section className={styles.jobs_section}>
         {jobsOnPage.map((job) => {
           return <Job key={job.id} job={job} />;
         })}
       </section>
 
-      {!(jobsOnPage.length < jobsNum) && (
-        <Button
-          onClick={handleLoadMore}
-          text={!(jobsNum === jobs.length) ? "Load More" : "Show Less"}
-        />
-      )}
+      <div className={styles.btn_wrapper}>
+        {!(jobsOnPage.length < jobsNum) && (
+          <Button
+            onClick={handleLoadMore}
+            styles={styles.btn}
+            text={!(jobsNum === jobs.length) ? "Load More" : "Show Less"}
+          />
+        )}
+      </div>
     </>
   );
 }

@@ -1,3 +1,4 @@
+import styles from "./../../styles/Jobs.module.scss";
 import Image from "next/image";
 import { useState } from "react";
 
@@ -7,7 +8,7 @@ function FilterBar({ locations, setJobFilter }) {
   const iconCheck = "assets/desktop/icon-check.svg";
 
   return (
-    <section>
+    <section className={styles.filter_bar_section}>
       <input type="text" />
 
       <select>

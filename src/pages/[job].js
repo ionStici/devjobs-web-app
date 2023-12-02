@@ -1,5 +1,5 @@
 function JobPage() {
-  return "job";
+  return "Job";
 }
 
 export default JobPage;

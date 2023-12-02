@@ -11,10 +11,14 @@
 
 .light {
   --color-bg: #f4f6f8;
+  --color-bg-box: #ffffff;
+  --color-text-title: #19202d;
 }
 
 .dark {
   --color-bg: #121721;
+  --color-bg-box: #19202d;
+  --color-text-title: #ffffff;
 }
 
 * {
@@ -35,4 +39,9 @@ html {
 body {
   background-color: var(--color-bg);
   transition: background-color 0.2s;
+}
+
+button,
+input {
+  font-family: inherit;
 }
