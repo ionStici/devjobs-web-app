@@ -14,6 +14,7 @@ export const assets = {
     iconLocation: "/assets/desktop/icon-location.svg",
     iconMoon: "/assets/desktop/icon-moon.svg",
     iconSearch: "/assets/desktop/icon-search.svg",
+    iconSearchWhite: "/assets/desktop/icon-search-white.svg",
     iconSun: "/assets/desktop/icon-sun.svg",
     logo: "/assets/desktop/logo.svg",
   },
