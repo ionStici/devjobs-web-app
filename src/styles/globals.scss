@@ -10,9 +10,11 @@
 }
 
 .light {
+  --color-bg: #f4f6f8;
 }
 
 .dark {
+  --color-bg: #121721;
 }
 
 * {
@@ -31,4 +33,6 @@ html {
 }
 
 body {
+  background-color: var(--color-bg);
+  transition: background-color 0.2s;
 }

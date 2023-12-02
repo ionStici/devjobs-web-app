@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { useState } from "react";
 
-function FilterBar({ locations }) {
+function FilterBar({ locations, setJobFilter }) {
   const iconSearch = "assets/desktop/icon-search.svg";
   const iconLocation = "assets/desktop/icon-location.svg";
   const iconCheck = "assets/desktop/icon-check.svg";

@@ -1,0 +1,73 @@
+.header {
+  height: 136px;
+  padding: 32px 24px;
+
+  background-image: url("/assets/mobile/bg-pattern-header.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media only screen and (min-width: 768px) {
+    height: 160px;
+    padding: 42px 40px;
+
+    background-image: url("/assets/tablet/bg-pattern-header.svg");
+    background-position: bottom left;
+  }
+
+  @media only screen and (min-width: 1200px) {
+    padding-top: 44px;
+
+    background-image: url("/assets/desktop/bg-pattern-header.svg");
+  }
+
+  .wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    @media only screen and (min-width: 768px) {
+      max-width: 750px;
+      margin: 0 auto;
+    }
+
+    @media only screen and (min-width: 1200px) {
+      max-width: 1110px;
+    }
+  }
+
+  button {
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+    border: none;
+    padding: 4px 0;
+    background-color: transparent;
+    cursor: pointer;
+
+    &:hover {
+      .circle {
+        background-color: var(--color-light-violet);
+      }
+    }
+  }
+
+  .toggle {
+    width: 48px;
+    height: 24px;
+    padding: 5px;
+    border-radius: 50px;
+    background-color: var(--color-white);
+  }
+
+  .circle {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: var(--color-violet);
+    transition: background-color 0.2s, transform 0.2s;
+  }
+
+  .to_left {
+    transform: translateX(24px);
+  }
+}
