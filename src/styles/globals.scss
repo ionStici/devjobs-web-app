@@ -1,0 +1,34 @@
+:root {
+  --color-white: hsla(0, 0%, 100%, 1);
+  --color-light-grey: hsla(217, 26%, 97%, 1);
+  --color-gray: hsla(212, 23%, 69%, 1);
+  --color-dark-grey: hsla(214, 17%, 51%, 1);
+  --color-violet: hsla(235, 69%, 61%, 1);
+  --color-light-violet: hsla(235, 82%, 77%, 1);
+  --color-very-dark-blue: hsla(219, 29%, 14%, 1);
+  --color-midnight: hsla(219, 29%, 10%, 1);
+}
+
+.light {
+}
+
+.dark {
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+body {
+}
