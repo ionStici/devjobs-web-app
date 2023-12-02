@@ -1,7 +1,6 @@
 import Head from "next/head";
-import Link from "next/link";
 import { getJobsData } from "@/lib/getJobsData";
-import Jobs from "@/components/Home/Jobs";
+import HomeComp from "@/components/Home/HomeComp";
 
 export default function Home({ data: jobs }) {
   return (
@@ -12,8 +11,7 @@ export default function Home({ data: jobs }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <Jobs jobs={jobs} />
+      <HomeComp jobs={jobs} />
     </>
   );
 }

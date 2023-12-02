@@ -1,7 +1,7 @@
 import styles from "./../../styles/Jobs.module.scss";
 import { useState } from "react";
 import Job from "./Job";
-import Button from "../Button";
+import Button from "../ui/Button";
 
 function Jobs({ jobs }) {
   const [jobsNum, setJobsNum] = useState(12);
@@ -24,10 +24,12 @@ function Jobs({ jobs }) {
         })}
       </section>
 
-      <Button
-        onClick={handleLoadMore}
-        text={!(jobsNum === jobs.length) ? "Load More" : "Show Less"}
-      />
+      {
+        <Button
+          onClick={handleLoadMore}
+          text={!(jobsNum === jobs.length) ? "Load More" : "Show Less"}
+        />
+      }
     </>
   );
 }
