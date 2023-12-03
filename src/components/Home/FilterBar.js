@@ -1,4 +1,4 @@
-import styles from "./../../styles/Jobs.module.scss";
+import styles from "./../../styles/FilterBar.module.scss";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { assets } from "@/data/assets";
@@ -20,12 +20,16 @@ function FilterBar({ locations, setJobFilter }) {
     return () => mediaQuery.removeEventListener("change", handleChange);
   }, []);
 
-  function handleSetFilter() {
+  function handleSetFilter({ target }) {
     setJobFilter({
       title: title,
       loc: location,
       fullTime: fullTime,
     });
+
+    if (smallScreen && target.classList.contains(styles.smallScreenSearch)) {
+      handleShowFilter();
+    }
   }
 
   function handleShowFilter() {
@@ -64,10 +68,20 @@ function FilterBar({ locations, setJobFilter }) {
         <div className={styles.filter_popup} ref={filterPopup}>
           <div className={styles.layout} onClick={handleShowFilter}></div>
           <div className={styles.wrapper}>
+            <Image
+              className={styles.icon_loc}
+              src={assets.desktop.iconLocation}
+              alt=""
+              width={17}
+              height={24}
+            />
             <select
+              style={{ opacity: !location && "0.5" }}
+              className={styles.select_loc}
               value={location}
               onChange={({ target }) => setLocation(target.value)}
             >
+              <option value="">Filter by location...</option>
               {locations.map((loc) => {
                 return (
                   <option key={loc} value={loc}>
@@ -77,11 +91,27 @@ function FilterBar({ locations, setJobFilter }) {
               })}
             </select>
 
-            <input
-              type="checkbox"
-              checked={fullTime}
-              onChange={({ target }) => setFulltime(target.checked)}
-            />
+            <label className={styles.checkbox_label}>
+              <div
+                style={
+                  fullTime ? { backgroundColor: "#5964E0", opacity: 1 } : {}
+                }
+              >
+                {fullTime && (
+                  <img src={assets.desktop.iconCheck} alt="" width={16} />
+                )}
+              </div>
+              <span>Full Time Only</span>
+              <input
+                type="checkbox"
+                checked={fullTime}
+                onChange={({ target }) => setFulltime(target.checked)}
+              />
+            </label>
+
+            <Button styles={styles.smallScreenSearch} onClick={handleSetFilter}>
+              Search
+            </Button>
           </div>
         </div>
 
