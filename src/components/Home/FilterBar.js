@@ -77,7 +77,7 @@ function FilterBar({ locations, setJobFilter }) {
               height={24}
             />
             <select
-              style={{ opacity: !location && "0.5" }}
+              style={{ opacity: !location && "0.3" }}
               className={styles.select_loc}
               value={location}
               onChange={({ target }) => setLocation(target.value)}
@@ -102,7 +102,7 @@ function FilterBar({ locations, setJobFilter }) {
                   <img src={assets.desktop.iconCheck} alt="" width={16} />
                 )}
               </div>
-              <span>Full Time Only</span>
+              <span>{smallScreen ? "Full Time Only" : "Full Time"}</span>
               <input
                 type="checkbox"
                 checked={fullTime}
@@ -110,9 +110,14 @@ function FilterBar({ locations, setJobFilter }) {
               />
             </label>
 
-            <Button styles={styles.smallScreenSearch} onClick={handleSetFilter}>
-              Search
-            </Button>
+            {smallScreen && (
+              <Button
+                styles={styles.smallScreenSearch}
+                onClick={handleSetFilter}
+              >
+                Search
+              </Button>
+            )}
           </div>
         </div>
 

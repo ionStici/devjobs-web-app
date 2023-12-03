@@ -62,8 +62,7 @@
     transition: color 0.2s;
 
     @media only screen and (min-width: 768px) {
-      flex-grow: 32.2%;
-      width: revert;
+      width: 222px;
       border-right: 1px solid rgba(110, 128, 152, 0.2);
       border-radius: 6px 0 0 6px;
       padding-left: 64px;
@@ -86,7 +85,6 @@
     }
 
     @media only screen and (min-width: 768px) {
-      flex-grow: 67.8%;
     }
 
     .layout {
@@ -123,6 +121,11 @@
         left: 50%;
         transform: translateX(-50%);
       }
+
+      @media only screen and (min-width: 768px) {
+        position: relative;
+        display: flex;
+      }
     }
   }
 
@@ -133,41 +136,59 @@
   }
 
   .icon_loc {
+    position: absolute;
+    z-index: 20;
+    pointer-events: none;
+
     @media only screen and (max-width: 767px) {
-      position: absolute;
-      z-index: 20;
       top: 24px;
       left: 24px;
-      pointer-events: none;
+    }
+
+    @media only screen and (min-width: 768px) {
+      top: 28px;
+      left: 24px;
     }
   }
 
   .select_loc {
+    font-size: 16px;
+    font-weight: 400;
+
+    background-color: transparent;
+
+    border: none;
+    padding-left: 57px;
+
+    cursor: pointer;
+    color: var(--color-text-title);
+    transition: color 0.2s;
+
     @media only screen and (max-width: 767px) {
       position: absolute;
       z-index: 19;
       left: 0;
       top: 0;
 
-      font-size: 16px;
-      font-weight: 400;
-
-      padding-left: 57px;
       width: 110%;
       height: 72px;
 
-      border: 0;
       border-bottom: 1px solid rgba(110, 128, 152, 0.2);
       border-radius: 6px;
+    }
 
-      background-color: transparent;
+    @media only screen and (min-width: 768px) {
+      width: 213px;
+      height: 80px;
 
-      &:focus {
-        outline: none;
-      }
+      -webkit-appearance: none;
+      -moz-appearance: none;
 
-      color: var(--color-text-title);
-      transition: color 0.2s;
+      border-right: 1px solid rgba(110, 128, 152, 0.2);
+    }
+
+    &:focus {
+      outline: none;
     }
   }
 
@@ -177,6 +198,10 @@
     padding: 12px 0;
     margin: 12px 0;
     cursor: pointer;
+
+    @media only screen and (min-width: 768px) {
+      margin-left: 20px;
+    }
 
     div {
       width: 24px;
@@ -224,6 +249,10 @@
       &:hover {
         background-color: #939bf4;
       }
+    }
+
+    @media only screen and (min-width: 768px) {
+      display: none;
     }
   }
 
