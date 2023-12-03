@@ -1,5 +1,11 @@
+import JobPageComp from "@/components/JobPage/JobPageComp";
+
 function JobPage() {
-  return "Job";
+  return (
+    <>
+      <JobPageComp />
+    </>
+  );
 }
 
 export default JobPage;
