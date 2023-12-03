@@ -6,14 +6,50 @@
   margin-bottom: 57px;
 
   form {
-    // display: flex;
+    display: flex;
+
+    max-width: 500px;
+    margin: 0 auto;
+
+    position: relative;
 
     background-color: var(--color-bg-box);
     transition: background-color 0.2s;
 
     height: 80px;
-    padding: 16px;
     border-radius: 6px;
+    overflow: hidden;
+  }
+
+  .input_title {
+    width: 100%;
+    padding-left: 24px;
+    border-radius: 6px;
+    border: none;
+
+    font-size: 16px;
+    font-weight: 400;
+
+    background-color: transparent;
+
+    color: var(--color-text-title);
+    transition: color 0.2s;
+
+    &:focus {
+      outline: none;
+    }
+
+    &::placeholder {
+      opacity: 0.5;
+    }
+  }
+
+  .filter_popup {
+    display: none;
+  }
+
+  .show_popup {
+    display: block;
   }
 
   .filter_btn,
@@ -24,12 +60,22 @@
 
     border: none;
 
+    position: absolute;
+    top: 16px;
+
     cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+
+    &:active {
+      transform: scale(0.9);
+    }
   }
 
   .filter_btn {
     background-color: transparent;
-    margin-right: 14px;
+    margin-left: auto;
+
+    right: 74px;
 
     img {
     }
@@ -37,6 +83,20 @@
 
   .search_btn {
     background-color: #5964e0;
+
+    right: 16px;
+
+    &:hover {
+      background-color: #939bf4;
+    }
+  }
+
+  .no_jobs {
+    color: var(--color-text-title);
+    transition: color 0.2s;
+
+    font-size: 20px;
+    font-weight: 700;
   }
 }
 
@@ -164,6 +224,15 @@
 
 .btn_wrapper {
   text-align: center;
+  margin: 32px 0 62px 0;
+
+  @media only screen and (min-width: 768px) {
+    margin: 56px 0 61px 0;
+  }
+
+  @media only screen and (min-width: 1200px) {
+    margin: 56px 0 104px 0;
+  }
 }
 
 .btn {
@@ -176,7 +245,7 @@
 
   border-radius: 5px;
   padding: 16px 30px;
-  margin: 32px 0 62px 0;
+
   border: none;
 
   cursor: pointer;
@@ -187,14 +256,6 @@
 
   &:active {
     transform: scale(0.9);
-  }
-
-  @media only screen and (min-width: 768px) {
-    margin: 56px 0 61px 0;
-  }
-
-  @media only screen and (min-width: 1200px) {
-    margin: 56px 0 104px 0;
   }
 }
 

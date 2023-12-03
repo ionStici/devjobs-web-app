@@ -32,7 +32,7 @@ function Jobs({ jobs: allJobs, jobFilter }) {
     });
 
     setJobs(filteredJobs);
-  }, []);
+  }, [jobFilter]);
 
   const [jobsNum, setJobsNum] = useState(12);
   const jobsOnPage = jobs.slice(0, jobsNum);
@@ -51,6 +51,9 @@ function Jobs({ jobs: allJobs, jobFilter }) {
         {jobsOnPage.map((job) => {
           return <Job key={job.id} job={job} />;
         })}
+        {jobsOnPage.length === 0 && (
+          <p className={styles.no_jobs}>No jobs were found 📭</p>
+        )}
       </section>
 
       <div className={styles.btn_wrapper}>
