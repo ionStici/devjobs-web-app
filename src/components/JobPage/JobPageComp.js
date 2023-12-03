@@ -1,9 +1,15 @@
-import styles from "./../../styles/JobPage.module.scss";
+import CompanyBox from "./CompanyBox";
+import JobDescription from "./JobDescription";
+import ApplyNow from "./ApplyNow";
 
 function JobPageComp({ job }) {
-  console.log(job);
-
-  return "job";
+  return (
+    <>
+      <CompanyBox job={job} />
+      <JobDescription job={job} />
+      <ApplyNow job={job} />
+    </>
+  );
 }
 
 export default JobPageComp;
