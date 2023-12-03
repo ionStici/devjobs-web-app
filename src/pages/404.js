@@ -1,8 +1,10 @@
 function Error404() {
   return (
-    <section>
-      <h1>⛔️ 404</h1>
-      <p>No such page exists</p>
+    <section className="error">
+      <div>
+        <h1>⛔️ 404</h1>
+        <p>No such page exists</p>
+      </div>
     </section>
   );
 }
