@@ -32,7 +32,13 @@ function Header() {
       <header className={styles.header}>
         <div className={styles.wrapper}>
           <Link href="/">
-            <Image src={logo} alt="DevJobs Logo" width={115} height={32} />
+            <Image
+              src={logo}
+              alt="DevJobs Logo"
+              width={115}
+              height={32}
+              priority
+            />
           </Link>
           <button onClick={handleThemeSwitch}>
             <Image src={iconSun} alt="" width={20} height={20} />
