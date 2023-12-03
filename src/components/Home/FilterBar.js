@@ -29,7 +29,16 @@ function FilterBar({ locations, setJobFilter }) {
   }
 
   function handleShowFilter() {
-    filterPopup.current.classList.add(styles.show_popup);
+    const popup = filterPopup.current;
+
+    if (popup.classList.contains(styles.show_popup)) {
+      popup.classList.remove(styles.show_popup);
+      return;
+    }
+
+    if (!popup.classList.contains(styles.show_popup)) {
+      popup.classList.add(styles.show_popup);
+    }
   }
 
   return (
@@ -53,24 +62,27 @@ function FilterBar({ locations, setJobFilter }) {
         />
 
         <div className={styles.filter_popup} ref={filterPopup}>
-          <select
-            value={location}
-            onChange={({ target }) => setLocation(target.value)}
-          >
-            {locations.map((loc) => {
-              return (
-                <option key={loc} value={loc}>
-                  {loc}
-                </option>
-              );
-            })}
-          </select>
+          <div className={styles.layout} onClick={handleShowFilter}></div>
+          <div className={styles.wrapper}>
+            <select
+              value={location}
+              onChange={({ target }) => setLocation(target.value)}
+            >
+              {locations.map((loc) => {
+                return (
+                  <option key={loc} value={loc}>
+                    {loc}
+                  </option>
+                );
+              })}
+            </select>
 
-          <input
-            type="checkbox"
-            checked={fullTime}
-            onChange={({ target }) => setFulltime(target.checked)}
-          />
+            <input
+              type="checkbox"
+              checked={fullTime}
+              onChange={({ target }) => setFulltime(target.checked)}
+            />
+          </div>
         </div>
 
         {smallScreen && (

@@ -11,7 +11,9 @@ function Jobs({ jobs: allJobs, jobFilter }) {
       let title, loc, fullTime;
 
       if (jobFilter.title) {
-        title = job.position.toLowerCase().includes(jobFilter.title);
+        title = job.position
+          .toLowerCase()
+          .includes(jobFilter.title.toLowerCase());
       } else {
         title = true;
       }

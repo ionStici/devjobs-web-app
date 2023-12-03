@@ -46,6 +46,33 @@
 
   .filter_popup {
     display: none;
+
+    .layout {
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.4965);
+
+      position: fixed;
+      z-index: 10;
+      top: 0;
+      left: 0;
+    }
+
+    .wrapper {
+      background-color: var(--color-bg-box);
+      margin: 0 24px;
+      padding: 0 24px;
+      width: 327px;
+      height: 217px;
+      border-radius: 6px;
+      transition: background-color 0.2s;
+
+      position: fixed;
+      z-index: 15;
+      top: 225px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
 
   .show_popup {
@@ -90,14 +117,14 @@
       background-color: #939bf4;
     }
   }
+}
 
-  .no_jobs {
-    color: var(--color-text-title);
-    transition: color 0.2s;
+.no_jobs {
+  color: var(--color-text-title);
+  transition: color 0.2s;
 
-    font-size: 20px;
-    font-weight: 700;
-  }
+  font-size: 20px;
+  font-weight: 700;
 }
 
 // // // // // // // // // // // // // // // // // // // //
