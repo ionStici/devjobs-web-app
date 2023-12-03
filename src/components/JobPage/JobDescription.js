@@ -1,5 +1,6 @@
 import styles from "./../../styles/JobPage.module.scss";
 import JobListing from "./JobListing";
+import JobLink from "./JobLink";
 
 function JobDescription({ job }) {
   const { postedAt, contract, position, location, apply } = job;
@@ -16,9 +17,10 @@ function JobDescription({ job }) {
           <h1>{position}</h1>
           <p>{location}</p>
         </div>
-        <a href={apply} target="_blank">
+
+        <JobLink link={apply} blank={true} styles={styles.link}>
           Apply Now
-        </a>
+        </JobLink>
       </div>
 
       <p>{description}</p>

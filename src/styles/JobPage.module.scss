@@ -1,16 +1,129 @@
 // // // // // // // // // // // // // // // // // // // //
 
 .section_company_box {
+  padding: 0 24px;
+  margin-top: -15px;
+  margin-bottom: 24px;
+
+  .wrapper {
+    background-color: var(--color-bg-box);
+    transition: background-color 0.2s;
+    border-radius: 6px;
+    position: relative;
+
+    text-align: center;
+    padding-top: 49px;
+    padding-bottom: 32px;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .img_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
+
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    img {
+      width: revert;
+      height: revert;
+    }
+  }
+
+  .position {
+    color: var(--color-text-title);
+    transition: color 0.2s;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 13px;
+  }
+
+  .site {
+    color: rgba(110, 128, 152, 1);
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 27px;
+  }
+
+  .comp_site,
+  .comp_site:link,
+  .comp_site:visited {
+    display: inline-block;
+    padding: 16px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+
+    color: var(rgba(89, 100, 224, 1));
+    background-color: rgba(89, 100, 224, 0.1);
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: rgba(89, 100, 224, 0.35);
+    }
+
+    &:active {
+      color: rgba(89, 100, 224, 1);
+    }
+  }
 }
 
 // // // // // // // // // // // // // // // // // // // //
 
 .section_job_description {
+  .link {
+  }
 }
 
 // // // // // // // // // // // // // // // // // // // //
 
 .section_apply_now {
+  .link {
+  }
 }
 
 // // // // // // // // // // // // // // // // // // // //
+
+.link,
+.link:link,
+.link:visited {
+}
+
+// // // // // // // // // // // // // // // // // // // //
+
+// ul {
+//     list-style: none;
+//     display: flex;
+//     column-gap: 28px;
+//     margin-bottom: 16px;
+
+//     color: #6e8098;
+//     font-size: 16px;
+//     font-weight: 400;
+//   }
+
+//   li:first-child {
+//     position: relative;
+
+//     &::after {
+//       content: "";
+//       width: 4px;
+//       height: 4px;
+//       border-radius: 50%;
+//       background-color: #6e8098;
+
+//       position: absolute;
+//       top: 50%;
+//       right: -14px;
+//       transform: translateY(-50%);
+//     }
+//   }

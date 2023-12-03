@@ -1,4 +1,5 @@
 import styles from "./../../styles/JobPage.module.scss";
+import JobLink from "./JobLink";
 
 function ApplyNow({ job }) {
   const { position, apply } = job;
@@ -10,9 +11,9 @@ function ApplyNow({ job }) {
         <p>So Digital Inc.</p>
       </div>
       <div>
-        <a href={apply} target="_blank">
+        <JobLink link={apply} blank={true} styles={styles.link}>
           Apply Now
-        </a>
+        </JobLink>
       </div>
     </section>
   );
