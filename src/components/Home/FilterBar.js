@@ -13,7 +13,7 @@ function FilterBar({ locations, setJobFilter }) {
   const filterPopup = useRef(null);
 
   useEffect(() => {
-    setSmallScreen(window.matchMedia("(max-width: 768px)").matches);
+    setSmallScreen(window.matchMedia("(max-width: 767px)").matches);
     const mediaQuery = window.matchMedia("(max-width: 768px)");
     const handleChange = (e) => setSmallScreen(e.matches ? true : false);
     mediaQuery.addEventListener("change", handleChange);
@@ -50,6 +50,7 @@ function FilterBar({ locations, setJobFilter }) {
       <form onSubmit={(e) => e.preventDefault()}>
         {!smallScreen && (
           <Image
+            className={styles.icon_search}
             src={assets.desktop.iconSearch}
             alt=""
             width={24}

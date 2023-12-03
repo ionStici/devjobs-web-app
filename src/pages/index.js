@@ -20,3 +20,6 @@ export async function getStaticProps() {
   const data = await getJobsData();
   return { props: { data: data } };
 }
+
+// 689 = 222 (32.2) 466 (67.6)
+// 1110 = 463 (41.7) 646 (58.2)

@@ -42,6 +42,12 @@
   .link:visited {
     text-decoration: none;
     color: inherit;
+
+    &:hover {
+      h2 {
+        color: #6e8098;
+      }
+    }
   }
 
   .image_wrapper {
