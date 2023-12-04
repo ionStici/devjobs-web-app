@@ -13,12 +13,20 @@
   --color-bg: #f4f6f8;
   --color-bg-box: #ffffff;
   --color-text-title: #19202d;
+
+  --color-link-bg: rgba(89, 100, 224, 0.1);
+  --color-link-bg-hover: rgba(89, 100, 224, 0.35);
+  --color-link-text: rgba(89, 100, 224, 1);
 }
 
 .dark {
   --color-bg: #121721;
   --color-bg-box: #19202d;
   --color-text-title: #ffffff;
+
+  --color-link-bg: rgba(255, 255, 255, 0.1);
+  --color-link-bg-hover: rgba(255, 255, 255, 0.25);
+  --color-link-text: rgba(255, 255, 255, 1);
 }
 
 * {

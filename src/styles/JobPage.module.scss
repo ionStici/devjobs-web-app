@@ -5,9 +5,16 @@
   margin-top: -15px;
   margin-bottom: 24px;
 
+  @media only screen and (min-width: 768px) {
+    padding: 0 40px;
+    margin-top: -40px;
+    margin-bottom: 32px;
+  }
+
   .wrapper {
     background-color: var(--color-bg-box);
     transition: background-color 0.2s;
+
     border-radius: 6px;
     position: relative;
 
@@ -16,6 +23,20 @@
     padding-bottom: 32px;
     max-width: 500px;
     margin: 0 auto;
+
+    @media only screen and (min-width: 768px) {
+      max-width: 730px;
+      height: 140px;
+      padding: 0;
+
+      text-align: left;
+      overflow: hidden;
+
+      display: flex;
+      align-items: center;
+      padding-left: 180px;
+      padding-right: 40px;
+    }
   }
 
   .img_wrapper {
@@ -32,9 +53,23 @@
     left: 50%;
     transform: translateX(-50%);
 
+    @media only screen and (min-width: 768px) {
+      width: 140px;
+      height: 140px;
+      border-radius: 6px 0 0 6px;
+
+      top: 0;
+      left: 0;
+      transform: revert;
+    }
+
     img {
       width: revert;
       height: revert;
+
+      @media only screen and (min-width: 768px) {
+        transform: scale(2);
+      }
     }
   }
 
@@ -44,6 +79,10 @@
     font-size: 20px;
     font-weight: 700;
     margin-bottom: 13px;
+
+    @media only screen and (min-width: 768px) {
+      font-size: 24px;
+    }
   }
 
   .site {
@@ -51,6 +90,16 @@
     font-size: 16px;
     font-weight: 400;
     margin-bottom: 27px;
+
+    @media only screen and (min-width: 768px) {
+      margin-bottom: 0;
+    }
+  }
+
+  div:last-child {
+    @media only screen and (min-width: 768px) {
+      margin-left: auto;
+    }
   }
 
   .comp_site,
@@ -63,16 +112,16 @@
     font-weight: 700;
     text-decoration: none;
 
-    color: var(rgba(89, 100, 224, 1));
-    background-color: rgba(89, 100, 224, 0.1);
+    color: var(--color-link-text);
+    background-color: var(--color-link-bg);
     transition: background-color 0.2s;
 
     &:hover {
-      background-color: rgba(89, 100, 224, 0.35);
+      background-color: var(--color-link-bg-hover);
     }
 
     &:active {
-      color: rgba(89, 100, 224, 1);
+      color: var(--color-link-text);
     }
   }
 }
