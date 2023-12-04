@@ -1,8 +1,10 @@
+import styles from "./../../styles/JobListing.module.scss";
+
 function JobListing({ heading, data, listType }) {
   const { content, items } = data;
 
   return (
-    <div>
+    <div className={styles.wrapper}>
       <h2>{heading}</h2>
       <p>{content}</p>
 

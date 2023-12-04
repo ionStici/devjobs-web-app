@@ -6,14 +6,16 @@ function ApplyNow({ job }) {
 
   return (
     <section className={styles.section_apply_now}>
-      <div>
-        <p>{position}</p>
-        <p>So Digital Inc.</p>
-      </div>
-      <div>
-        <JobLink link={apply} blank={true} styles={styles.link}>
-          Apply Now
-        </JobLink>
+      <div className={styles.wrapper}>
+        <div>
+          <p>{position}</p>
+          <p>So Digital Inc.</p>
+        </div>
+        <div>
+          <JobLink link={apply} blank={true} styles={styles.link}>
+            Apply Now
+          </JobLink>
+        </div>
       </div>
     </section>
   );
