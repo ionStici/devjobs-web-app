@@ -8,25 +8,27 @@ function JobDescription({ job }) {
 
   return (
     <section className={styles.section_job_description}>
-      <div>
-        <div>
-          <ul>
-            <li>{postedAt}</li>
-            <li>{contract}</li>
-          </ul>
-          <h1>{position}</h1>
-          <p>{location}</p>
+      <div className={styles.wrapper}>
+        <div className={styles.heading}>
+          <div>
+            <ul>
+              <li>{postedAt}</li>
+              <li>{contract}</li>
+            </ul>
+            <h1>{position}</h1>
+            <p>{location}</p>
+          </div>
+
+          <JobLink link={apply} blank={true} styles={styles.link}>
+            Apply Now
+          </JobLink>
         </div>
 
-        <JobLink link={apply} blank={true} styles={styles.link}>
-          Apply Now
-        </JobLink>
+        <p className={styles.description}>{description}</p>
+
+        <JobListing heading="Requirements" data={requirements} listType="ul" />
+        <JobListing heading="What You Will Do" data={role} listType="ol" />
       </div>
-
-      <p>{description}</p>
-
-      <JobListing heading="Requirements" data={requirements} listType="ul" />
-      <JobListing heading="What You Will Do" data={role} listType="ol" />
     </section>
   );
 }

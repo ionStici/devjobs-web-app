@@ -1,4 +1,4 @@
-import styles from "./../../styles/JobPage.module.scss";
+import styles from "./../../styles/CompanyBox.module.scss";
 import Image from "next/image";
 import JobLink from "./JobLink";
 
