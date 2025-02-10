@@ -1,40 +1,49 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Frontend Mentor - Devjobs web app solution
 
-## Getting Started
+This is a solution to the [Devjobs web app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/devjobs-web-app-HuvC_LP4l). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-First, run the development server:
+## About the Project
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+The "Devjobs Web App" is a challenge from Frontend Mentor aimed at creating a job listing platform for developers.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This project was built using Next.js 14 Pages Router, focusing on static site generation for deployment on GitHub Pages.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+It combines React for component-based development and Scss for styling, offering a dark/light theme toggle for user preference.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+Users can browse through a list of job offer cards, filter them by job title, location, and whether they are full-time positions. Each job listing has its own statically generated page, providing detailed information about the job offer.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Preview and Links
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+<details>
+<summary><b>Preview</b></summary>
+<br>
 
-## Learn More
+![](./preview.png)
 
-To learn more about Next.js, take a look at the following resources:
+<br>
+</details>
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+| [Frontend Mentor](https://www.frontendmentor.io/solutions/devjobs-web-app-JUzOCZKDux) | [Live Demo URL](https://ionstici.github.io/devjobs-web-app) |
+| ------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Features
 
-## Deploy on Vercel
+- **Dark/Light Theme:** Users can switch between dark and light themes for a personalized browsing experience.
+- **Job Listings:** A list of job offer cards, each representing a unique job opportunity.
+- **Filtering:** Ability to filter jobs by title, location, and employment type (full-time or not).
+- **Static Generation:** Each job listing has a dedicated, statically generated page for SEO benefits and fast load times.
+- **Responsive Design:** Styled with Scss to ensure the app is usable on various devices.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Built with
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- **`Next.js` 14 Pages Router:** For routing and static site generation.
+- **`React`:** To create the interactive UI components.
+- **`Scss`:** For modular styling of the application.
+
+## Deployment
+
+This project is deployed on **GitHub Pages** as a statically generated site, leveraging Next.js's export feature for static HTML generation.
+
+## Acknowledgements
+
+Thanks to **Frontend Mentor** for providing this challenge, which allowed me to practice with Next.js 14 Pages Router and static site generation techniques.
